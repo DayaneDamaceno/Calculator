@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Calculadora</title>
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="script-src 'self' 'unsafe-inline' 'unsafe-eval';"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <form name="calc" class="container">
+      <div id="display">
+        <input type="text" id="total" name="total" />
+      </div>
+      <div class="options">
+        <span class="cl" onclick="document.calc.total.value= ''">C</span>
+        <span class="pr" onclick="document.calc.total.value += '%'">%</span>
+        <span class="dv" onclick="document.calc.total.value += '/'">/</span>
+
+        <span class="num" onclick="document.calc.total.value += '7'">7</span>
+        <span class="num" onclick="document.calc.total.value += '8'">8</span>
+        <span class="num" onclick="document.calc.total.value += '9'">9</span>
+        <span class="mt" onclick="document.calc.total.value += '*'">*</span>
+
+        <span class="num" onclick="document.calc.total.value += '4'">4</span>
+        <span class="num" onclick="document.calc.total.value += '5'">5</span>
+        <span class="num" onclick="document.calc.total.value += '6'">6</span>
+        <span class="min" onclick="document.calc.total.value += '-'">-</span>
+
+        <span class="num" onclick="document.calc.total.value += '1'">1</span>
+        <span class="num" onclick="document.calc.total.value += '2'">2</span>
+        <span class="num" onclick="document.calc.total.value += '3'">3</span>
+        <span class="max" onclick="document.calc.total.value += '+'">+</span>
+
+        <span class="num" onclick="document.calc.total.value += '0'">0</span>
+        <span class="num" onclick="document.calc.total.value += '.'">.</span>
+        <span
+          class="eq"
+          onclick="document.calc.total.value = eval(calc.total.value)"
+          >=</span
+        >
+      </div>
+    </form>
+  </body>
+</html>
